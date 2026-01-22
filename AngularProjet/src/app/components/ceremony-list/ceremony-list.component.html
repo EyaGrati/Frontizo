@@ -1,0 +1,31 @@
+<div class="container mt-3">
+    <h2>Ceremonies</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          
+          <th>Ceremony Date</th>
+          <th>number of guests</th>
+          
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ceremony of Ceremonies">
+         
+          <td>{{ ceremony.dateFuneral }}</td>
+          <td>{{ ceremony.nbrInvite }}</td>
+          
+          <td>
+            <!-- Bouton pour supprimer un emplacement de sépulture -->
+            <button class="btn btn-danger" (click)="deleteCeremonies(ceremony.idCer)">
+              Delete
+            </button>
+            <button class="update-button" (click)="editCeremony(ceremony.idCer)">Edit</button>
+       
+          </td>
+        </tr>
+      </tbody>
+    </table>
+   
+  

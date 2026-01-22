@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>Update Ceremony</h2>
+    <form #ceremonyForm="ngForm" (ngSubmit)="updateCeremony(ceremonyForm)">
+      <div class="form-group">
+        <label for="dateFuneral">Date of Funeral</label>
+        <input type="date" class="form-control" id="dateFuneral" [(ngModel)]="ceremony.dateFuneral" name="dateFuneral" required>
+      </div>
+      <div class="form-group">
+        <label for="nbrInvite">Number of Invitees</label>
+        <input type="number" class="form-control" id="nbrInvite" [(ngModel)]="ceremony.nbrInvite" name="nbrInvite" required>
+      </div>
+      <!-- Add other fields here for funeralLocation, flowers, meals, burrialLocation, user -->
+  
+      <button type="submit" class="btn btn-add">UPDATE</button>    </form>
+  </div>
+  

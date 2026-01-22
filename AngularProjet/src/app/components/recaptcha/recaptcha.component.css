@@ -1,0 +1,30 @@
+/* Style de base pour l'élément ngx-recaptcha2 */
+.ng-recaptcha {
+    display: inline-block;
+  }
+  
+  /* Style pour centrer l'élément ngx-recaptcha2 */
+  .ng-recaptcha-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style pour ajuster la taille de l'élément ngx-recaptcha2 */
+  .ng-recaptcha > div {
+    width: 304px; /* Largeur par défaut de reCAPTCHA */
+  }
+  
+  /* Style pour les images de vérification reCAPTCHA */
+  /* Vous pouvez personnaliser ces styles selon vos besoins */
+  .ng-recaptcha-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Style pour la case à cocher "Je ne suis pas un robot" */
+  /* Vous pouvez personnaliser ces styles selon vos besoins */
+  .ng-recaptcha-checkbox {
+    margin-bottom: 10px; /* Marge en bas pour séparer de l'image de vérification */
+  }
+  

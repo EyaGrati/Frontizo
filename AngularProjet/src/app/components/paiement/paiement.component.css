@@ -1,0 +1,41 @@
+/* payment.component.css */
+.price-table {
+    background-color: #f9f9f9; /* Couleur de fond légère */
+    border: 2px solid #e0e0e0; /* Bordure grise */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 20px; /* Espacement interne */
+    max-width: 600px; /* Largeur maximale */
+    margin: 20px auto; /* Centrer dans la page */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère pour la profondeur */
+  }
+  
+  .price-table h2 {
+    color: #333; /* Couleur de texte sombre */
+    font-size: 20px; /* Taille de police */
+    line-height: 1.5; /* Espacement des lignes */
+    border-bottom: 1px solid #e0e0e0; /* Ligne séparatrice */
+    padding-bottom: 10px; /* Espacement au-dessous du texte */
+    margin-bottom: 10px; /* Espacement au-dessous de la bordure */
+  }
+  
+  .price-table h2:last-child {
+    border-bottom: none; /* Pas de ligne séparatrice pour le dernier élément */
+  }
+  .btn-add {
+    display: block; /* Use block to fill the width or inline-block for auto width */
+    padding: 10px 20px; /* Larger padding */
+    font-size: 20px; /* Larger font size */
+    background-color: #eb0303; /* Green background color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+    margin: 0 auto; /* Center the button */
+    width: 50%; /* Adjust width as needed */
+  }
+  
+  .btn-add:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  

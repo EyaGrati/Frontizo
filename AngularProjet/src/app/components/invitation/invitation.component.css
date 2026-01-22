@@ -1,0 +1,120 @@
+.invitation {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.invitation .header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.invitation .header h1 {
+    font-size: 36px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.invitation .invitation-text {
+    margin-bottom: 20px;
+}
+
+.invitation .invitation-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    text-align: justify;
+}
+
+.invitation h2 {
+    font-size: 28px;
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.invitation .row {
+    margin-bottom: 40px;
+}
+
+.invitation .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.invitation .card:hover {
+    transform: translateY(-5px);
+}
+
+.invitation .card-body {
+    padding: 20px;
+}
+
+.invitation .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.invitation .meal-image-container img {
+    max-width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.invitation .meal-image-container img:hover {
+    transform: scale(1.05);
+}
+
+.w3-button {
+    transition: all 0.3s ease;
+    padding: 10px 15px; /* Ajustement du padding pour un meilleur équilibre */
+    font-size: 16px; /* Taille de police améliorée pour la lisibilité */
+    border-radius: 5px; /* Coins arrondis pour un look moderne */
+    color: #ffffff; /* Couleur du texte */
+    background-color: #007bff; /* Couleur de fond par défaut */
+    border: 1px solid #007bff; /* Couleur de la bordure */
+}
+
+.w3-button:hover {
+    background-color: #0056b3; /* Nuance de bleu plus foncée au survol */
+    border-color: #0056b3; /* Bordure assortie au fond au survol */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre subtile pour un effet de profondeur */
+}
+
+.w3-button svg {
+    margin-right: 8px; /* Espace entre l'icône et le texte */
+    fill: #ffffff; /* Assurez-vous que la couleur de l'icône SVG est blanche pour un bon contraste */
+}
+
+.w3-button b {
+    vertical-align: middle; /* Aligner le texte avec l'icône */
+}
+.w3-row {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100%; /* Assurez-vous que le conteneur a une hauteur pour le centrage vertical */
+}
+
+.w3-col {
+    flex: 1; /* Permet au conteneur du bouton de prendre toute la largeur disponible */
+    display: flex;
+    justify-content: center; /* Centre le bouton dans le conteneur .w3-col */
+    align-items: center; /* Optionnel si vous voulez centrer verticalement dans .w3-col */
+}
+
+

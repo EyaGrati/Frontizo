@@ -1,0 +1,38 @@
+<div class="container">
+<div class="container mt-3">
+    <h2>Flowers</h2>
+
+      <thead>
+        <tr>
+          
+          <th>Flower name</th>
+          <th>Flower price</th>
+          <th>Flower Description</th>
+          <th>Flower picture</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let flower of flowers">
+         
+          <td>{{ flower.nomFlower }}</td>
+          <td>{{ flower.prixFlower }}</td>
+          <td>{{ flower.description }}</td>
+          <td>
+            <!-- Assurez-vous que le chemin de l'URL de l'image est correct -->
+            <img [src]="'http://localhost/hadilprojet/' + flower.imgFlower" alt="Image de l'emplacement" width="100">
+          </td>
+          <td>
+            <!-- Bouton pour supprimer un emplacement de sépulture -->
+            <button class="btn btn-danger" (click)="deleteFlower(flower.idFlower)">
+              Delete
+            </button>
+            <button class="update-button" (click)="editFlower(flower.idFlower)">Edit</button>
+            
+          </td>
+        </tr>
+      </tbody>
+  
+
+  </div>
+</div> 

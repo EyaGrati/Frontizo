@@ -1,0 +1,32 @@
+<div class="container mt-3">
+  <h2>Cemeteries</h2>
+  
+    <thead>
+      <tr>
+        
+        <th>Cemetery name</th>
+        <th>Cemetery Adresse</th>
+        <th>Cemetery Picture</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let burrialLocation of burrialLocations">
+       
+        <td>{{ burrialLocation.burrialName }}</td>
+        <td>{{ burrialLocation.burrialAdress }}</td>
+        <td>
+          <!-- Assurez-vous que le chemin de l'URL de l'image est correct -->
+          <img [src]="'http://localhost/hadilprojet/' + burrialLocation.burrialImg" alt="Image de l'emplacement" width="100">
+        </td>
+        <td>
+          <!-- Bouton pour supprimer un emplacement de sépulture -->
+          <button class="btn btn-danger" (click)="deleteBurrialLocation(burrialLocation.idBurrial)">
+            Delete
+          </button>
+          <button class="update-button" (click)="editBurrialLocation(burrialLocation.idBurrial)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+
+</div>

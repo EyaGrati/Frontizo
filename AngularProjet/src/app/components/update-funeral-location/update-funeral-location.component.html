@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Edit Funeral Location</h2>
+    <form #funeralForm="ngForm" (ngSubmit)="updateFuneralLocation()">
+      <div class="form-group">
+        <label for="NameLoc">Funeral Location Name:</label>
+        <input type="text" class="form-control" id="NameLoc" name="nameLoc" [(ngModel)]="funeralLocation.nameLoc" required>
+      </div>
+      <div class="form-group">
+        <label for="FuneralAdress">Funeral Address:</label>
+        <input type="text" class="form-control" id="FuneralAdress" name="funeralAdress" [(ngModel)]="funeralLocation.funeralAdress" required>
+      </div>
+      <div class="form-group">
+        <label for="priceLoc">Price:</label>
+        <input type="number" class="form-control" id="priceLoc" name="priceLoc" [(ngModel)]="funeralLocation.priceLoc" required>
+      </div>
+      <div class="form-group">
+        <label for="CapacityLoc">Capacity:</label>
+        <input type="number" class="form-control" id="CapacityLoc" name="capacityLoc" [(ngModel)]="funeralLocation.capacityLoc" required>
+      </div>
+      <div class="form-group">
+        <label for="TypeLocation">Funeral Location Type:</label>
+        <input type="text" class="form-control" id="TypeLocation" name="typeLocation" [(ngModel)]="funeralLocation.typeLocation" required>
+      </div>
+      <div class="form-group">
+        <label for="image">Picture:</label>
+        <!-- Style added to hide the file input element -->
+        <input type="file" id="image" class="form-control-file" (change)="onFileSelected($event)" #fileInput style="display:none">
+        <button type="button" class="btn btn-upload" (click)="fileInput.click()">
+          <i class="fas fa-upload"></i> Change Picture
+        </button>
+      </div>
+      <div class="form-group">
+        <img [src]="imagePreview || 'http://localhost/hadilprojet/' + funeralLocation.imgLoc" alt="Preview Image" width="100">
+      </div>
+      <button type="submit" class="btn btn-add">UPDATE</button>
+    </form>
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</div>

@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>Add Funeral Location</h2>
+  <form #funeralLocationForm="ngForm" (ngSubmit)="addFuneralLocation()">
+    <div class="form-group">
+      <label for="nameLoc">Location Name</label>
+      <input type="text" id="nameLoc" class="form-control" name="nameLoc" [(ngModel)]="funeralLocation.nameLoc" required>
+    </div>
+    <div class="form-group">
+      <label for="funeralAdress">Address</label>
+      <input type="text" id="funeralAdress" class="form-control" name="funeralAdress" [(ngModel)]="funeralLocation.funeralAdress" required>
+    </div>
+    <div class="form-group">
+      <label for="priceLoc">Price</label>
+      <input type="number" id="priceLoc" class="form-control" name="priceLoc" [(ngModel)]="funeralLocation.priceLoc" required>
+    </div>
+    <div class="form-group">
+      <label for="capacityLoc">Capacity</label>
+      <input type="number" id="capacityLoc" class="form-control" name="capacityLoc" [(ngModel)]="funeralLocation.capacityLoc" required>
+    </div>
+    <div class="form-group">
+      <label for="typeLocation">Type</label>
+      <select id="typeLocation" class="form-control" name="typeLocation" [(ngModel)]="funeralLocation.typeLocation" required>
+        <option *ngFor="let type of typeLocationOptions" [value]="type">{{ type }}</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="image">Picture:</label>
+      <input type="file" id="image" class="form-control-file" hidden (change)="onFileSelected($event)">
+      <button type="button" class="btn btn-upload" onclick="document.getElementById('image').click()">
+        <i class="fas fa-upload"></i> Upload
+      </button>
+    </div>
+    <div *ngIf="imagePreview" class="mt-3">
+      <img [src]="imagePreview" class="img-fluid" alt="Preview Image">
+    </div>
+    <button type="submit" class="btn btn-add">Add</button>
+  </form>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</div>

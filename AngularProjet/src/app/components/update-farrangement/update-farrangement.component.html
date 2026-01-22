@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h2 class="text-center">Update Farrangement</h2>
+        <form *ngIf="fArrangement" (ngSubmit)="onSubmit()">
+          
+          <div class="form-group">
+            <label for="step">Step</label>
+            <input type="text" class="form-control" id="step" name="step" [(ngModel)]="fArrangement.step">
+          </div>
+          <div class="form-group">
+            <label for="statut">Statut</label>
+            <input type="text" class="form-control" id="statut" name="statut" [(ngModel)]="fArrangement.statut">
+          </div>
+          
+          <!-- Add more input fields for ceremony properties as needed -->
+          <button type="submit" class="btn btn-success btn-block">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

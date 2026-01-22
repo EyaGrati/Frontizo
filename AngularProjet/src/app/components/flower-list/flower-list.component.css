@@ -1,0 +1,74 @@
+
+
+/* Add styles for the table */
+.container {
+  position: absolute; /* ou "absolute" si vous préférez que l'élément soit positionné par rapport à un conteneur parent */
+  top: 40px; /* Placez l'élément à 20 pixels du haut de la fenêtre */
+  left: 0; /* Facultatif : positionnez l'élément à gauche de la fenêtre */
+  right: 0; /* Facultatif : positionnez l'élément à droite de la fenêtre */
+  margin: 0 auto; /* Ajustez la marge horizontale comme vous le souhaitez */
+  padding: 20px;
+  max-height: 0%; /* Réduisez la hauteur maximale à 50% de la hauteur du conteneur parent */
+  max-width: 50%; /* Réduisez la largeur maximale à 50% de la largeur du conteneur parent */
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Add styles for table headings */
+th {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 12px; /* Increased padding for better readability */
+  text-align: left;
+}
+
+/* Add styles for table data cells */
+td {
+  border: 1px solid #ddd;
+  padding: 12px; /* Increased padding for better readability */
+}
+
+/* Add alternate row background color */
+tbody tr:nth-child(even) {
+  background-color: #f8f8f8; /* Slightly lighter than f2f2f2 for better contrast */
+}
+
+/* Add hover effect on table rows */
+tbody tr:hover {
+  background-color: #e2e2e2; /* Light gray on hover */
+}
+
+/* Add button styles */
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px; /* Slightly increased padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s; /* Smooth transition for better user experience */
+}
+
+/* Add button hover effect */
+button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Update button specific styles */
+.update-button {
+  background-color: rgb(255, 128, 0); /* Orange */
+}
+
+.update-button:hover {
+  background-color: rgb(204, 102, 0); /* Darker orange on hover */
+}

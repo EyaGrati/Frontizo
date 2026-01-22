@@ -1,0 +1,31 @@
+<div class="container">
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Picture</th>
+      <th>Capacity</th>
+      <th>Funeral Address</th>
+      <th>Price</th>
+      <th>Type</th>
+      <th>Action</th>
+      <!-- Add other column headings as needed -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let location of funeralLocations">
+      <td>{{ location.nameLoc }}</td>
+      <td><img [src]="'http://localhost/hadilprojet/' + location.imgLoc" alt="Funeral Location Image" width="100"></td>  
+      <td>{{ location.capacityLoc }}</td>
+      <td>{{ location.funeralAdress }}</td>
+      <td>{{ location.priceLoc }}</td>
+      <td>{{ location.typeLocation }}</td>
+      <td>
+        <button (click)="deleteFuneralLocation(location.idLoc)">Delete</button>
+        <button class="update-button" (click)="editFuneralLocation(location.idLoc)">Edit</button>
+      </td>
+      <!-- Add other data cells as needed -->
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,38 @@
+<div class="container">
+<div class="container mt-3">
+    <h2>Meals
+    </h2>
+   
+      <thead>
+        <tr>
+          
+          <th>Meal name</th>
+          <th>Meal price</th>
+          <th>Meal Description</th>
+          <th>Meal picture</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let meal of meals">
+         
+          <td>{{ meal.nameMeal }}</td>
+          <td>{{ meal.prixMeals }}</td>
+          <td>{{ meal.description }}</td>
+          <td>
+            <!-- Assurez-vous que le chemin de l'URL de l'image est correct -->
+            <img [src]="'http://localhost/hadilprojet/' + meal.imgMeals" alt="Image de l'emplacement" width="100">
+          </td>
+          <td>
+            <!-- Bouton pour supprimer un emplacement de sépulture -->
+            <button class="btn btn-danger" (click)="deleteFlower(meal.idMeal)">
+              Delete
+            </button>
+            <button class="update-button" (click)="editMeal(meal.idMeal)">Edit</button>
+            
+          </td>
+        </tr>
+      </tbody>
+  
+  </div>
+</div> 

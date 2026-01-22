@@ -1,0 +1,24 @@
+/* Styles personnalisés pour la barre d'outils */
+.fc-toolbar {
+    background-color: #f0f0f0; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+    border: none; /* Supprimer la bordure */
+  }
+  
+  /* Styles personnalisés pour les événements */
+  .fc-event {
+    background-color: #007bff; /* Couleur de fond des événements */
+    color: #fff; /* Couleur du texte des événements */
+    border: none; /* Supprimer la bordure */
+    border-radius: 5px; /* Ajouter des coins arrondis */
+    padding: 5px 10px; /* Ajouter un espace intérieur */
+  }
+  
+  /* Styles personnalisés pour les cellules de jour */
+  .fc-day {
+    padding: 10px; /* Ajouter de l'espace autour des cellules de jour */
+  }
+  
+  /* Autres styles personnalisés */
+  /* Ajoutez vos propres styles personnalisés ici */
+  

@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let meal of meals">
+        <div class="card my-custom-card">
+          <!-- Ajout d'un gestionnaire de clic sur la carte entière pour la sélection -->
+          <div class="card my-custom-card" (click)="selectMeal(meal)" [class.selected]="selectedMeal === meal" style="cursor: pointer;">
+            <div class="card-body">
+              <h5 class="card-title">{{ meal.nameMeal }}</h5>
+              <p class="card-text">{{ meal.description }}</p>
+              <p class="card-text">Prix: {{ meal.prixMeals }} €</p>
+              <div class="meal-image-container">
+                <img [src]="'http://localhost/hadilprojet/' + meal.imgMeals" alt="Image du repas">
+              </div>
+              <!-- Le bouton Sélectionner a été enlevé -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  

@@ -1,0 +1,20 @@
+/* Étoiles pour le rating moyen */
+.avg-filled {
+    color: rgb(53, 51, 51); /* Couleur noire pour le rating moyen */
+    cursor: default;
+    font-size: 25px;
+  }
+  
+  /* Étoiles pour le rating utilisateur */
+  .user-filled {
+    color: gold; /* Couleur jaune pour le rating de l'utilisateur */
+    cursor: pointer;
+    font-size: 25px;
+  }
+  
+  span {
+    font-size: 25px;
+    color: grey; /* Couleur par défaut des étoiles non sélectionnées */
+  }
+  
+  

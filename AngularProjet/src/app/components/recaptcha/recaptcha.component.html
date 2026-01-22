@@ -1,0 +1,13 @@
+<head>
+    
+      <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+      async defer>
+  </script>
+</head>
+<form [formGroup]="aFormGroup">
+    <ngx-recaptcha2 #captchaElem
+      [siteKey]="siteKey"
+      
+      formControlName="recaptcha">
+    </ngx-recaptcha2>
+  </form>

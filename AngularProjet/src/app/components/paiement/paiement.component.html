@@ -1,0 +1,9 @@
+<!-- payment.component.html -->
+<div class="price-table">
+    <h2>Total price of flowers: {{ totalPriceOfFlowers }} €</h2>
+    <h2>Total price of meals: {{ totalPriceOfMeals }} €</h2>
+    <h2>Price of funeral location: {{ PriceOfFuneralLoc }} €</h2>
+    <h2>Total price: {{ PriceOfFuneralLoc + totalPriceOfFlowers + totalPriceOfMeals }} €</h2>
+  </div>
+  <button type="submit" class="btn btn-add" (click)="confirmPayment()">Confirm Payment</button>
+  

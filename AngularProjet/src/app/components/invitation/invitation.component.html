@@ -1,0 +1,82 @@
+
+<head>
+    <meta property="og:title" content="Titre de votre page" />
+<meta property="og:description" content="Description de votre page" />
+<meta property="og:image" content="URL de l'image à afficher" />
+<meta property="og:url" content="URL de votre page" />
+
+</head>
+<div class="invitation">
+    <div class="header">
+        <h1>Funeral Invitation</h1>
+    </div>
+
+    <div class="invitation-text">
+        <p>You are cordially invited to attend the funeral ceremony for {{ nom }} {{ prenom }}. The ceremony will be held on {{ date }}. Your presence and support during this difficult time would mean a lot to us.</p>
+    </div>
+
+    <!-- Section Funeral Homes -->
+    <h2>Funeral Homes</h2>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let funeralLocation of funeralLocations">
+            <ng-container *ngIf="funeralLocation.typeLocation.toString() === 'FuneralHome'">
+                <div class="card my-custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ funeralLocation.nameLoc }}</h5>
+                        <div class="meal-image-container">
+                            <img [src]="'http://localhost/hadilprojet/' + funeralLocation.imgLoc" alt="Image of the funeral home">
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+    <!-- Section Ritual Locations -->
+    <h2>Ritual Locations</h2>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let ritualLocation of funeralLocations">
+            <ng-container *ngIf="ritualLocation.typeLocation.toString() !== 'FuneralHome'">
+                <div class="card my-custom-card">   
+                    <div class="card-body">
+                        <h5 class="card-title">{{ ritualLocation.nameLoc }}</h5>
+                        <div class="meal-image-container">
+                            <img [src]="'http://localhost/hadilprojet/' + ritualLocation.imgLoc" alt="{{ ritualLocation.nameLoc }}">
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+    <!-- Section Burrial Locations -->
+    <h2>Burrial Locations</h2>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let burrialLocation of burrialLocations">
+            <div class="card my-custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ burrialLocation.burrialName }}</h5>
+                    <!-- Display other details of the burial location if necessary -->
+                    <div class="meal-image-container">
+                        <img [src]="'http://localhost/hadilprojet/' + burrialLocation.burrialImg" alt="Image of the burial location">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w3-row" style="display: flex;">
+    <div class="w3-col m4" style="flex: 1;">
+        <a [href]="generateAbsoluteUrl('/invit/' + id)" class="share facebook">
+            <button class="w3-button w3-padding-small w3-light-blue w3-border w3-medium">
+                <svg style="width: 30px; height: 30px; margin-top: 5px; margin-bottom: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                <b>Share</b>
+            </button>
+        </a>
+       
+
+    </div>
+</div>
+

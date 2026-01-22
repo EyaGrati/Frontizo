@@ -1,0 +1,28 @@
+<!-- success.component.html -->
+<div #pdfContent class="success-message">
+    <h1>Payment Successfully Processed</h1>
+    <div class="ceremony-details">
+      <h2>Ceremony Details</h2>
+      <p><strong>Name:</strong> {{ nom }} {{ prenom }}</p>
+      <p><strong>Date of the Funeral:</strong> {{ Funeraldate | date:'fullDate' }}</p>
+      <p><strong>Number of Guests:</strong> {{ nbreofguests }}</p>
+      <div class="price-table">
+        <p>Total price of flowers: {{ totalPriceOfFlowers }} €</p>
+        <p>Total price of meals: {{ totalPriceOfMeals }} €</p>
+        <p>Price of funeral location: {{ PriceOfFuneralLoc }} €</p>
+        <p>Total price: {{ PriceOfFuneralLoc + totalPriceOfFlowers + totalPriceOfMeals }} €</p>
+      </div>
+    </div>
+   
+
+    <button (click)="downloadPDF()">
+        <i class="fas fa-download"></i> Download as PDF
+    </button>
+  
+    
+  </div>
+  <button type="submit" class="btn btn-add" (click)="invit()">Next</button>
+
+  
+
+

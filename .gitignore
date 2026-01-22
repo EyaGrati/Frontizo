@@ -1,0 +1,38 @@
+# -----------------------
+# Node.js / Angular
+# -----------------------
+AngularProject/node_modules/
+AngularProject/dist/
+AngularProject/out-tsc/
+AngularProject/.angular/
+AngularProject/*.log
+AngularProject/npm-debug.log*
+AngularProject/yarn-error.log*
+
+# Environment / secrets
+AngularProject/.env
+AngularProject/.env.*
+
+# -----------------------
+# Java / Spring Boot
+# -----------------------
+# Ignore only generated files
+SpringBootProject/target/
+SpringBootProject/*.log
+SpringBootProject/*.class
+SpringBootProject/.classpath
+SpringBootProject/.project
+SpringBootProject/.settings/
+
+# Maven / Gradle backups
+SpringBootProject/.mvn/
+SpringBootProject/pom.xml.tag
+SpringBootProject/pom.xml.releaseBackup
+SpringBootProject/pom.xml.versionsBackup
+SpringBootProject/src/main/resources/application.properties
+
+# -----------------------
+# OS / système
+# -----------------------
+.DS_Store
+Thumbs.db

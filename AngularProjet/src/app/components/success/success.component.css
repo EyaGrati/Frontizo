@@ -1,0 +1,78 @@
+/* success.component.css */
+.success-message {
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    background: #fff;
+  }
+  
+  .ceremony-details {
+    margin-top: 20px;
+  }
+  
+  .ceremony-details h1, .ceremony-details h2 {
+    color: #333;
+  }
+  
+  .ceremony-details p, .price-table p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+  
+  .price-table {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .price-table p {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+  }
+  
+  .price-table p:before {
+    content: attr(data-label);
+    font-weight: bold;
+  }
+  
+  /* Pour le téléchargement en PDF */
+  @media print {
+    body {
+      visibility: hidden;
+    }
+  
+    .success-message, .success-message * {
+      visibility: visible;
+    }
+  
+    .success-message {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  
+  .download-pdf-btn {
+    background-color: #007bff; /* Couleur de fond bleue */
+    color: white; /* Texte blanc */
+    padding: 10px 15px; /* Padding autour du texte et de l'icône */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Bordures arrondies */
+    cursor: pointer; /* Curseur en forme de main au survol */
+    font-size: 16px; /* Taille du texte */
+    display: inline-flex; /* Pour aligner l'icône et le texte */
+    align-items: center; /* Centrer verticalement le contenu du bouton */
+  }
+  
+  .download-pdf-btn i {
+    margin-right: 5px; /* Espacer l'icône du texte */
+  }
+  

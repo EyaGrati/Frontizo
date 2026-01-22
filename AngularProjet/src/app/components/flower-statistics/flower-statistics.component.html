@@ -1,0 +1,9 @@
+<div class="top-selected-flowers">
+    <h2>Top Selected Flowers:</h2>
+    <ul>
+      <li *ngFor="let flowerStat of topSelectedFlowers">
+        {{ flowerStat.flowerName }} - {{ flowerStat.selectionCount }}
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,92 @@
+.container {
+  position: absolute; /* ou "absolute" si vous préférez que l'élément soit positionné par rapport à un conteneur parent */
+  top: 40px; /* Placez l'élément à 20 pixels du haut de la fenêtre */
+  left: 0; /* Facultatif : positionnez l'élément à gauche de la fenêtre */
+  right: 0; /* Facultatif : positionnez l'élément à droite de la fenêtre */
+  margin: 0 auto; /* Ajustez la marge horizontale comme vous le souhaitez */
+  padding: 20px;
+  max-height: 0%; /* Réduisez la hauteur maximale à 50% de la hauteur du conteneur parent */
+  max-width: 50%; /* Réduisez la largeur maximale à 50% de la largeur du conteneur parent */
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  h2 {
+    margin-bottom: 20px;
+    color: #343a40;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select,
+  input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  select:focus {
+    border-color: #007bff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .btn-upload,
+  .btn-add {
+    display: block;
+    padding: 8px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+  }
+  
+  .btn-upload {
+    background-color: #ff5100;
+    width: auto; /* Adjust width as needed */
+    margin-bottom: 1rem; /* Space below the button */
+  }
+  
+  .btn-upload:hover {
+    background-color: #d93d00;
+  }
+  
+  .btn-add {
+    display: block; /* Use block to fill the width or inline-block for auto width */
+    padding: 10px 20px; /* Larger padding */
+    font-size: 20px; /* Larger font size */
+    background-color: #3da728; /* Green background color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+    margin: 0 auto; /* Center the button */
+    width: 30%; /* Adjust width as needed */
+  }
+  
+  .btn-add:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  .fas {
+    margin-right: 5px;
+  }
+  

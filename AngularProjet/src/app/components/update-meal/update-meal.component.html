@@ -1,0 +1,34 @@
+<div class="container">
+    <h2>Edit Flower</h2>
+    <form #mealForm="ngForm" (ngSubmit)="updateMeal()">
+      <div class="form-group">
+        <label for="nameMeal">Meal Name:</label>
+        <input type="text" class="form-control" id="nameMeal" name="nameMeal" [(ngModel)]="meal.nameMeal" required>
+      </div>
+      <div class="form-group">
+        <label for="prixMeals">Meal price:</label>
+        <input type="text" class="form-control" id="prixMeals" name="prixMeals" [(ngModel)]="meal.prixMeals" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Meal Description:</label>
+        <input type="text" class="form-control" id="description" name="description" [(ngModel)]="meal.description" required>
+      </div>
+      
+   
+     
+      <div class="form-group">
+        <label for="image">Picture:</label>
+        <!-- Style added to hide the file input element -->
+        <input type="file" id="image" class="form-control-file" (change)="onFileSelected($event)" #fileInput style="display:none">
+        <button type="button" class="btn btn-upload" (click)="fileInput.click()">
+          <i class="fas fa-upload"></i> Change Picture
+        </button>
+      </div>
+      <div class="form-group">
+        <img [src]="imagePreview || 'http://localhost/hadilprojet/' + meal.imgMeals" alt="Preview Image" width="100">
+      </div>
+      <button type="submit" class="btn btn-add">UPDATE</button>
+    </form>
+  </div>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  

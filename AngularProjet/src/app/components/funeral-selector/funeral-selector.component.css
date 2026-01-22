@@ -1,0 +1,146 @@
+/* Ajustement des cartes */
+.my-custom-card {
+    width: 250px; /* Largeur fixe des cartes */
+    height: 370px; /* Hauteur fixe des cartes */
+    margin-right: 10px; /* Marge à droite pour l'espace entre les cartes */
+    margin-bottom: 60px; /* Marge en bas pour l'espace entre les lignes */
+    float: left; /* Alignement des cartes sur la gauche */
+  }
+  
+  /* Stylisation de la rangée pour contenir les cartes */
+  .row {
+    overflow: auto; /* Activation du défilement horizontal si les cartes ne rentrent pas sur une seule ligne */
+    white-space: nowrap; /* Empêche le passage à la ligne des éléments enfants de la rangée */
+  }
+  
+  /* Ajustement de la marge intérieure de la rangée pour éviter le débordement */
+  .row::after {
+    content: "";
+    flex: 0 0 20px; /* Ajoute un espace à la fin de la rangée */
+  }
+  
+  /* Ajout d'une ombre légère et un effet de survol */
+  .card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ajoute une légère ombre pour un effet de profondeur */
+    transition: transform 0.2s; /* Ajoute un effet de transition pour le survol */
+    border-radius: 10px; /* Arrondit les coins de la carte pour un look plus moderne */
+    background-color: #f3f2ef;
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Légèrement agrandir la carte au survol pour attirer l'attention */
+  }
+  
+  /* Ajuster la taille et la position des images */
+  /* Stylisation de l'image de la carte */
+/* Stylisation de l'image de la carte */
+/* Stylisation de l'image de la carte */
+/* Stylisation de l'image de la carte */
+.meal-image-container {
+  width: 100%; /* Prend toute la largeur disponible dans la carte */
+  height: 150px; /* Hauteur fixe pour uniformiser la taille des images */
+  overflow: hidden; /* Masque les parties de l'image qui dépassent de la zone définie */
+  border-radius: 10px 10px 0 0; /* Arrondit les coins supérieurs de l'image */
+}
+
+.meal-image-container img {
+    width: 100%; /* Prend toute la largeur disponible dans le conteneur */
+    height: 95%; /* Prend toute la hauteur disponible dans le conteneur */
+    object-fit: cover; /* Assure que l'image couvre toute la zone disponible sans déformation */
+    border-radius: 10px; /* Arrondit tous les coins de l'image */
+}
+
+
+
+  
+  
+  
+  /* Stylisation du corps de la carte */
+  .card-body {
+    padding: 15px; /* Ajoute de l'espacement autour du contenu à l'intérieur de la carte */
+  }
+  
+  /* Stylisation du titre de la carte */
+  .card-title {
+    margin-bottom: 10px; /* Réduit l'espacement sous le titre pour une meilleure densité visuelle */
+    font-size: 20px; /* Augmente la taille du titre pour une meilleure lisibilité */
+  }
+  
+  /* Stylisation du texte de la carte */
+  .card-text {
+    margin-bottom: 10px; /* Espacement uniforme pour tout le texte à l'intérieur de la carte */
+    color: #918b8b; /* Une couleur légèrement plus douce pour le texte pour réduire la fatigue visuelle */
+  }
+  
+  /* Stylisation du bouton de la carte */
+  .btn-primary {
+    background-color: #007bff; /* Couleur principale pour le bouton, peut être ajustée */
+    border-color: #007bff; /* Assure que la bordure du bouton correspond à sa couleur de fond */
+    width: 100%; /* Fait en sorte que le bouton s'étende sur toute la largeur de la carte */
+    margin-top: 10px; /* Ajoute de l'espace au-dessus du bouton */
+  }
+  .selected {
+    border: 2px solid #5f5d5a; /* Couleur de bordure bleue */
+    background-color: #494846; /* Couleur d'arrière-plan légère */
+  }
+  .btn-add {
+    display: block; /* Use block to fill the width or inline-block for auto width */
+    padding: 10px 20px; /* Larger padding */
+    font-size: 20px; /* Larger font size */
+    background-color: #eb0303; /* Green background color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+    margin: 0 auto; /* Center the button */
+    width: 10%; /* Adjust width as needed */
+  }
+  
+  .btn-add:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  #chat-bubble {
+    position: fixed;
+    bottom: 566px;
+    right: 66px;
+    background-color: #007bff;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
+    font-size: 24px;
+    z-index: 1000; /* Ensure it's above other items */
+}
+
+#chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
+    border: 1px solid #ccc;
+    z-index: 999; /* Ensure it's just below the bubble */
+}
+
+.btn-cal {
+  background-color: #276b38; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  border: none; /* Supprime la bordure */
+  border-radius: 5px; /* Ajoute des coins arrondis */
+  padding: 5px 10px; /* Ajoute un peu de marge intérieure */
+  cursor: pointer; /* Change le curseur au survol */
+  transition: background-color 0.3s ease; /* Ajoute une transition fluide lors du survol */
+}
+
+.btn-cal:hover {
+  background-color: #02310a; /* Couleur de fond au survol */
+}
+
+  
+  
+  

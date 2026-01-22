@@ -1,0 +1,16 @@
+<!-- Affichage de la moyenne des ratings -->
+<div>
+  AVG:
+  <span *ngFor="let star of [1, 2, 3, 4, 5]; let i = index"
+        [class.avg-filled]="averageRating > i">★</span>
+  ({{ averageRating }})
+</div>
+
+<!-- Rating par l'utilisateur -->
+<!-- Rating par l'utilisateur -->
+<div>Enter your rating:
+  <span *ngFor="let star of [1, 2, 3, 4, 5]; let i = index" 
+        (click)="rateUser($event, i + 1)" 
+        [class.user-filled]="userRating > i">★</span>
+</div>
+

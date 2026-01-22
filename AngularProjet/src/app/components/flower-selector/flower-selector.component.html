@@ -1,0 +1,43 @@
+<div class="container">
+  <h2>Flowers:</h2>
+    <div class="row">
+      <div class="col-md-3" *ngFor="let flower of flowers">
+        <div class="card my-custom-card">
+          <!-- Ajout d'un gestionnaire de clic sur la carte entière pour la sélection -->
+          <div class="card my-custom-card" (click)="selectFlower(flower)" [class.selected]="selectedFlower === flower" style="cursor: pointer;">
+            <div class="card-body">
+              <h5 class="card-title">{{ flower.nomFlower }}</h5>
+              <p class="card-text">{{ flower.description }}</p>
+              <p class="card-text">Prix: {{ flower.prixFlower }} €</p>
+              <div class="meal-image-container">
+                <img [src]="'http://localhost/hadilprojet/' + flower.imgFlower" alt="Image du repas">
+              </div>
+              <!-- Le bouton Sélectionner a été enlevé -->
+            </div>
+            
+          </div>
+          
+        </div>
+       
+      </div>
+    </div>
+    <h2>Meals:</h2>
+    <app-meal-selector></app-meal-selector>
+    <button type="submit" class="btn btn-add" (click)="payer()">Payer</button>
+
+      <!-- Chat bubble icon -->
+      <div id="chat-bubble" (click)="toggleChat()">
+        <i class="fas fa-comment-dots"></i>
+      </div>
+      
+
+    <!-- Hidden chat widget iframe -->
+    <div id="chat-container" style="display: none;">
+      <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/9ed1ef6d-ed45-48d1-8f16-44009a11c507"></iframe>
+
+    </div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  </div>
+  

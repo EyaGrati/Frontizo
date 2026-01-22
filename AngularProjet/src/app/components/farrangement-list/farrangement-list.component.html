@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h2>Liste des arrangements de funérailles</h2>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Étape</th>
+              <th>Statut</th>
+              <th>Actions</th>
+              <!-- Ajoutez ici les en-têtes supplémentaires si nécessaire -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let fArrangement of fArrangements" class="table-row">
+              <td>{{ fArrangement.idArrangement }}</td>
+              <td>{{ fArrangement.step }}</td>
+              <td>{{ fArrangement.statut }}</td>
+              <td>
+                <!-- Bouton pour supprimer un emplacement de sépulture -->
+                <button class="btn btn-danger" (click)="removeFArrangement(fArrangement.idArrangement)">
+                  Delete
+                </button>
+                <button class="update-button" (click)="editFarrang(fArrangement.idArrangement)">Edit</button>
+                
+           
+              </td>
+              <!-- Ajoutez ici d'autres colonnes si nécessaire -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
